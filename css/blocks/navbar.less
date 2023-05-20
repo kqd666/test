@@ -1,0 +1,155 @@
+// main: ../style.less
+
+.navbar {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    margin: 0 auto;
+    height: 300px;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    overflow: visible;
+}
+
+.menu {
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li {
+    position: relative;
+}
+
+.burger_li {
+    padding-bottom: 15px;
+}
+
+nav ul {
+    padding-left: 0px;
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.burger {
+    font-size: 20px;
+}
+.burger1 {
+    font-size: 20px;
+}
+
+.submenu {
+    background-color: none;
+    //display: none;
+    top: 0%;
+    position: absolute;
+    flex-direction: column;
+    //visibility: hidden;
+    //transform: translateY(-2em);
+    z-index: -1;
+    //transition: all 0.3s ease-in-out 0s, z-index 0s linear 0.01s, 1s opacity, 0.1s visibility;
+    opacity: 0;
+    visibility: visible;
+    transition: .55s opacity, .55s visibility;
+}
+
+nav {
+    padding-right: 10px;
+    margin-top: 0px;
+    height: 100px;
+    width: 900px;
+    text-align: center;
+
+}
+
+nav .nav_link{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    outline: none;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+}
+
+.nav_link {
+  margin-top: 40px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.burger:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    content: "";
+    transition: width 0.3s ease-out;
+}
+
+.burger:hover:after,
+.burger:focus:after {
+    width: 100%;
+}
+
+.burger1:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    content: "";
+    transition: width 0.3s ease-out;
+}
+
+.burger1:hover:after,
+.burger1:focus:after {
+    width: 100%;
+}
+
+.nav_link:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    content: "";
+    transition: width 0.3s ease-out;
+}
+
+.nav_link:hover:after,
+.nav_link:focus:after {
+    width: 100%;
+}
+
+li:hover .submenu {
+    //display: flex;
+    clip: auto;
+    width: auto;
+    margin: 0;
+}
+
+li:focus .submenu,
+li:focus-within .submenu,
+li:hover .submenu {
+  //visibility: visible; /* shows sub-menu */
+  //opacity: 1;
+  z-index: 1;
+  //transform: translateY(30%);
+  //transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+  opacity: 1;
+  visibility: visible;
+}
+
